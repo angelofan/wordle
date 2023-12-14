@@ -12,38 +12,35 @@
 </div>
 <div class:complete={visible} class="examples">
 	<div><strong>示例</strong></div>
+	<div>1. 首先输入一个你喜欢的单词。</div>
 	<div class="row">
-		<Tile value="w" state="🟩" />
-		<Tile value="e" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="r" state="🔳" />
-		<Tile value="y" state="🔳" />
+		<Tile value="s" state="🟩" />
+		<Tile value="m" state="🟨" />
+		<Tile value="o" state="⬛" />
+		<Tile value="k" state="⬛" />
+		<Tile value="e" state="⬛" />
 	</div>
-	<div>🟩 表示：单词中包含字母 <strong>W</strong> 并且位置正确</div>
+	<div>🟩 表示：单词中包含字母 <strong>S</strong> 并且位置正确</div>
+	<div>🟨 表示：单词中包含字母 <strong>M</strong> 但是不在这个位置</div>
+	<div>⬛ 表示：单词中不包含字母 <strong>O</strong> <strong>K</strong> <strong>E</strong></div>
+	<br/>
+	<div>2. 根据上面的线索，尝试下一个单词。</div>
 	<div class="row">
-		<Tile value="p" state="🔳" />
-		<Tile value="i" state="🟨" />
-		<Tile value="l" state="🔳" />
-		<Tile value="l" state="🔳" />
-		<Tile value="s" state="🔳" />
+		<Tile value="s" state="🟩" />
+		<Tile value="a" state="🟨" />
+		<Tile value="m" state="⬛" />
+		<Tile value="m" state="🟩" />
+		<Tile value="y" state="⬛" />
 	</div>
-	<div>🟨 表示：单词中包含字母 <strong>I</strong> 但是不在这个位置</div>
+	<div>3. 综合上面所有的线索，尝试下一个单词。</div>
 	<div class="row">
-		<Tile value="v" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="g" state="🔳" />
-		<Tile value="u" state="⬛" />
-		<Tile value="e" state="🔳" />
-	</div>
-	<div>⬛ 表示：单词中不包含字母 <strong>U</strong></div>
-	<div class="row">
-		<Tile value="w" state="🟩" />
-		<Tile value="h" state="🟩" />
-		<Tile value="i" state="🟩" />
+		<Tile value="s" state="🟩" />
 		<Tile value="t" state="🟩" />
-		<Tile value="e" state="🟩" />
+		<Tile value="a" state="🟩" />
+		<Tile value="m" state="🟩" />
+		<Tile value="p" state="🟩" />
 	</div>
-	<div>当所有字母和位置都正确时，所有字母都显示为 🟩，挑战成功！</div>
+	<div>当所有字母都显示为 🟩 时，表示所有的字母和位置都正确，既挑战成功！</div>
 	<div>尽可能使用最少的次数猜到它~</div>
 </div>
 <div>
