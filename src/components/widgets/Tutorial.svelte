@@ -23,7 +23,6 @@
 	<div>🟩 表示：单词中包含字母 <strong>S</strong> 并且位置正确</div>
 	<div>🟨 表示：单词中包含字母 <strong>M</strong> 但是不在这个位置</div>
 	<div>⬛ 表示：单词中不包含字母 <strong>O</strong> <strong>K</strong> <strong>E</strong></div>
-	<br/>
 	<div>2. 根据上面的线索，尝试下一个单词。</div>
 	<div class="row">
 		<Tile value="s" state="🟩" />
