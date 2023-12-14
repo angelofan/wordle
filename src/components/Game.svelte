@@ -204,7 +204,7 @@
 
 <Modal bind:visible={showStats}>
 	{#if modeData.modes[$mode].historical}
-		<h2 class="historical">Statistics not available for historical games</h2>
+		<h2 class="historical">历史比赛的统计数据不可用</h2>
 	{:else}
 		<Statistics data={stats} />
 		<Distribution distribution={stats.guesses} {game} />

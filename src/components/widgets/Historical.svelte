@@ -61,7 +61,7 @@
 
 		e.currentTarget.dispatchEvent(custom_event("close", null, { bubbles: true }));
 		showSettings = false;
-		toaster.pop(`${GameMode[$mode]} wordle #${newWordNum}`, 2);
+		toaster.pop(`${GameMode[$mode]} 第${newWordNum}期`, 2);
 		reset();
 	}
 	mode.subscribe(() => {
@@ -79,27 +79,27 @@
 	}
 </script>
 
-<h3>Play a historical game</h3>
+<h3>重玩历史游戏</h3>
 {#key $mode}
 	<form>
 		<input
 			type="text"
 			bind:value={linkValue}
-			placeholder="Example: {window.location}/1"
+			placeholder="示例：{window.location}/1"
 			class:valid={validLink}
 			on:input={() => (validLink = validateLink())}
 			on:keydown={onInput}
 		/>
 	</form>
 {/key}
-<div>Paste in a link</div>
-<h3>or</h3>
+<div>粘贴链接</div>
+<h3>或者</h3>
 <div class="number">
 	<form>
 		<input
 			type="number"
 			bind:value={numValue}
-			placeholder="Example: 1"
+			placeholder="示例：1"
 			class:valid={validNumber}
 			on:input={() => (validNumber = validateNumber(+numValue, getWordNumber($mode, true)))}
 			on:keydown={onInput}
@@ -111,14 +111,14 @@
 		{/each}
 	</select>
 </div>
-<div>Enter a game number between 1 and {getWordNumber($mode, true) - 1}</div>
+<div>输入 1 到 {getWordNumber($mode, true) - 1} 之间的游戏期数 </div>
 <div
 	class:disabled={!validLink && !validNumber}
 	class="button"
 	on:click={submit}
 	on:keydown={submit}
 >
-	play
+	开始
 </div>
 
 <style lang="scss">
