@@ -1,6 +1,6 @@
 {
-	"short_name": "Wordle+",
-	"name": "Wordle+",
+	"short_name": "单词竞猜",
+	"name": "单词竞猜",
 	"start_url": "https://angelofan.github.io/wordle/",
 	"background_color": "#6aaa64",
 	"theme_color": "#6aaa64",
