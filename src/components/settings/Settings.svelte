@@ -80,7 +80,7 @@
 		</Setting>
 		<div class="links">
 			<a href="https://github.com/angelofan/wordle" target="_blank" rel="noreferrer">
-				留下一颗 ⭐
+				为此项目打颗 ⭐
 			</a>
 			<a href="https://github.com/angelofan/wordle/issues" target="_blank" rel="noreferrer">
 				报告错误
