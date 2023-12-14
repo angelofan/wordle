@@ -15,7 +15,7 @@ ${state.board.state
 .slice(0, state.guesses)
 .map((r) => r.join(""))
 .join("\n")}\n\n${failed(state) ? "💢 哦豁，我没有猜中~" : '🎉 哟吼，我'+state.guesses+'次就猜中了~'}
-\n快来一起玩：https://mikhad.github.io/wordle`
+\n快来一起玩：https://angelofan.github.io/wordle`
 		);
 		toaster.pop("分享内容已复制到剪贴板~");
 	}

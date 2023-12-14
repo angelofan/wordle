@@ -79,10 +79,10 @@
 			</svelte:fragment>
 		</Setting>
 		<div class="links">
-			<a href="https://github.com/MikhaD/wordle" target="_blank" rel="noreferrer">
+			<a href="https://github.com/angelofan/wordle" target="_blank" rel="noreferrer">
 				留下一颗 ⭐
 			</a>
-			<a href="https://github.com/MikhaD/wordle/issues" target="_blank" rel="noreferrer">
+			<a href="https://github.com/angelofan/wordle/issues" target="_blank" rel="noreferrer">
 				报告错误
 			</a>
 		</div>
