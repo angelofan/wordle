@@ -30,40 +30,40 @@
 <!-- <svelte:body class:light={!$settings.dark} class:colorblind={$settings.colorblind} /> -->
 <div class="outer">
 	<div class="settings-top">
-		<h3>settings</h3>
+		<h3>设置</h3>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div
 			on:click={() => {
 				if (!state.validHard) {
-					toaster.pop("Game has already violated hard mode");
+					toaster.pop("之前的猜测已经违反了严格模式");
 				}
 			}}
 		>
 			<Setting type="switch" bind:value={$settings.hard[$mode]} disabled={!state.validHard}>
-				<svelte:fragment slot="title">Hard Mode</svelte:fragment>
+				<svelte:fragment slot="title">严格模式</svelte:fragment>
 				<svelte:fragment slot="desc">
-					Any revealed hints must be used in subsequent guesses
+					提交的单词必须包含之前给出的字母线索
 				</svelte:fragment>
 			</Setting>
 		</div>
 		<Setting type="switch" bind:value={$settings.dark}>
-			<svelte:fragment slot="title">Dark Theme</svelte:fragment>
+			<svelte:fragment slot="title">暗黑模式</svelte:fragment>
 		</Setting>
 		<Setting type="switch" bind:value={$settings.colorblind}>
-			<svelte:fragment slot="title">Color Blind Mode</svelte:fragment>
-			<svelte:fragment slot="desc">High contrast colors</svelte:fragment>
+			<svelte:fragment slot="title">色弱模式</svelte:fragment>
+			<svelte:fragment slot="desc">使用高对比度颜色</svelte:fragment>
 		</Setting>
 		<Setting type="dropdown" bind:value={$mode} options={modeData.modes.map((e) => e.name)}>
-			<svelte:fragment slot="title">Game Mode</svelte:fragment>
+			<svelte:fragment slot="title">游戏模式</svelte:fragment>
 			<svelte:fragment slot="desc">
-				The game mode determines how often the word refreshes
+				游戏模式决定了单词刷新的频率
 			</svelte:fragment>
 		</Setting>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<Setting type="custom" bind:value={$mode}>
-			<svelte:fragment slot="title">Play Historical Game</svelte:fragment>
+			<svelte:fragment slot="title">重玩历史游戏</svelte:fragment>
 			<svelte:fragment slot="desc">
-				Play a previous word by pasting in a link or setting the date number
+				通过粘贴链接或设置期数来重玩之前的游戏
 			</svelte:fragment>
 			<svelte:fragment slot="custom">
 				<svg
@@ -80,10 +80,10 @@
 		</Setting>
 		<div class="links">
 			<a href="https://github.com/MikhaD/wordle" target="_blank" rel="noreferrer">
-				Leave a ⭐
+				留下一颗 ⭐
 			</a>
 			<a href="https://github.com/MikhaD/wordle/issues" target="_blank" rel="noreferrer">
-				Report a Bug
+				报告错误
 			</a>
 		</div>
 	</div>

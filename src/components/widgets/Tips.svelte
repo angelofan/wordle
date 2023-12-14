@@ -1,16 +1,16 @@
 <script context="module" lang="ts">
 	const tips = [
-		"You can change the gamemode by clicking WORDLE+ or swiping the board left or right.",
-		"Hard mode is game mode specific. Turning it on in one game mode won't change it on the others.",
-		"Double tap or right click a word on the board to learn its definition.",
-		"Hard mode can be enabled during a game if you haven't violated the hard mode rules yet.",
-		"Double tap or right click the next row to see how many possible words can be played there, if you use all the previous information.",
-		"Because words are chosen from the list randomly it is possible to get the same word again.",
-		"When you see the refresh button in the top left corner it means a new word is ready.",
-		"Everyone has the same wordle at the same time. Your word #73 is the same as everyone elses #73.",
-		"There are more valid guesses than possible words, ie. not all 5 letter words can be selected as an answer by the game.",
-		"Historical games don't count towards your stats. Historical games are when you follow a link to a specific game number.",
-		"Only the data for latest historical game is saved for each game mode.",
+		"您可以通过单击 单词竞猜 或向左或向右滑动棋盘来更改游戏模式。",
+		"不同游戏模式的严格模式开关互不影响。",
+		"双击或右键单击格子中的单词即可查看它的释义。",
+		"如果您之前的猜测没有违反严格模式的规则，就可以在游戏过程中启用严格模式。",
+		"如果您使用之前的所有信息，请双击或右键单击下一行，看看可以在那里还有多少个符合已给出线索的单词。",
+		"因为单词是从列表中随机选择的，所以有可能再次刷新到相同的单词。",
+		"当您看到左上角的刷新按钮时，表示新单词已准备就绪，点击即可刷新。",
+		"每个人同时都有相同的单词。也就是说，相同的游戏模式中，你的单词 第73期 与其他人的单词 第73期 相同。",
+		"本游戏的词库不可能全部包含所有现实中的单词，即可能会有实际存在的单词提示 不在单词列表中，这属于正常现象。",
+		"历史游戏不会计入您的统计数据。历史游戏是指您点击指向特定游戏期数的链接。",
+		"每种游戏模式只保存最新历史游戏的数据。",
 	];
 </script>
 
@@ -28,7 +28,7 @@
 </script>
 
 <div class="outer">
-	<div class="number">Tip {index + 1}/{tips.length}</div>
+	<div class="number">小贴士 {index + 1}/{tips.length}</div>
 	<div class="tip">{tips[index]}</div>
 	<svg
 		class="left"

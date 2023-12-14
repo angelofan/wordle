@@ -8,10 +8,10 @@
 	let stats: [string, string | number][];
 	$: {
 		stats = [
-			["Played", data.played],
-			["Win %", Math.round(((data.played - data.guesses.fail) / data.played) * 100) || 0],
+			["挑战次数", data.played],
+			["胜率 %", Math.round(((data.played - data.guesses.fail) / data.played) * 100) || 0],
 			[
-				"Average Guesses",
+				"平均猜测",
 				(
 					Object.entries(data.guesses).reduce((a, b) => {
 						if (!isNaN(+b[0])) {
@@ -23,16 +23,17 @@
 			],
 		];
 		if (data.guesses.fail > 0) {
-			stats.push(["Lost", data.guesses.fail]);
+			stats.push(["失败次数", data.guesses.fail]);
 		}
 		if (data.hasStreak) {
-			stats.push(["Current Streak", data.streak]);
-			stats.push(["Max Streak", data.maxStreak]);
+			stats.push(["当前连胜", data.streak]);
+			stats.push(["最大连胜", data.maxStreak]);
 		}
 	}
 </script>
 
-<h3>Statistics ({modeData.modes[$mode].name})</h3>
+<h3>统计数据</h3>
+<p>{modeData.modes[$mode].name}</p>
 <div>
 	{#each stats as stat}
 		<Stat name={stat[0]} stat={stat[1]} />
@@ -44,5 +45,12 @@
 		display: flex;
 		justify-content: center;
 		gap: 8px;
+	}
+	h3 {
+		margin-bottom: 1px;
+	}
+	p {
+		margin-bottom: 10px;
+		text-align: center;
 	}
 </style>

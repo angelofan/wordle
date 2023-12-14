@@ -95,8 +95,8 @@
 			on:click={() => dispatch("closeTutPopUp")}
 			on:keydown={() => dispatch("closeTutPopUp")}
 		>
-			double tap a row to see a word's definition, or how many words can be played there
-			<span class="ok">OK</span>
+			双击一行可以查看单词的定义，或者可以在当前行有多少个单词组合
+			<span class="ok">明白</span>
 		</div>
 	{/if}
 </div>

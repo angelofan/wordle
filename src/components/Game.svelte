@@ -57,7 +57,7 @@
 
 	function submitWord() {
 		if (game.latestWord.length !== COLS) {
-			toaster.pop("Not enough letters");
+			toaster.pop("字母数量不够");
 			board.shake(game.guesses);
 		} else if (words.contains(game.latestWord)) {
 			if (game.guesses > 0) {
@@ -65,12 +65,12 @@
 				if ($settings.hard[$mode]) {
 					if (hm.type === "🟩") {
 						toaster.pop(
-							`${contractNum(hm.pos + 1)} letter must be ${hm.char.toUpperCase()}`
+							`${contractNum(hm.pos + 1)}字母必须是${hm.char.toUpperCase()}`
 						);
 						board.shake(game.guesses);
 						return;
 					} else if (hm.type === "🟨") {
-						toaster.pop(`Guess must contain ${hm.char.toUpperCase()}`);
+						toaster.pop(`必须包含字母${hm.char.toUpperCase()}`);
 						board.shake(game.guesses);
 						return;
 					}
@@ -85,7 +85,7 @@
 			if (game.lastWord === word) win();
 			else if (game.guesses === ROWS) lose();
 		} else {
-			toaster.pop("Not in word list");
+			toaster.pop("不在单词列表中");
 			board.shake(game.guesses);
 		}
 	}
@@ -229,7 +229,7 @@
 			on:click={concede}
 			on:keydown={concede}
 		>
-			give up
+			放弃
 		</div>
 	{/if}
 </Modal>
@@ -237,25 +237,25 @@
 <Modal fullscreen={true} bind:visible={showSettings}>
 	<Settings state={game} on:historical={() => (showHistorical = true)} />
 	{#if game.active}
-		<div class="button concede" on:click={concede} on:keydown={concede}>give up</div>
+		<div class="button concede" on:click={concede} on:keydown={concede}>放弃</div>
 	{/if}
 	<Tips change={showSettings} />
 
 	<svelte:fragment slot="footer">
 		<a href="https://www.nytimes.com/games/wordle/" target="_blank" rel="noreferrer"
-			>Original Wordle</a
+			>原版 Wordle</a
 		>
 		<div>
 			<div>v{version}</div>
 			<div
-				title="double click to reset your stats"
+				title="双击重置您的统计数据"
 				class="word"
 				on:dblclick={() => {
 					localStorage.clear();
-					toaster.pop("localStorage cleared");
+					toaster.pop("本地存储已清除");
 				}}
 			>
-				{modeData.modes[$mode].name} word #{game.wordNumber}
+				{modeData.modes[$mode].name} 第{game.wordNumber}期
 			</div>
 		</div>
 	</svelte:fragment>

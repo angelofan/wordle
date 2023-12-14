@@ -47,7 +47,7 @@
 			toaster.pop(modeData.modes[$mode].name);
 		}}
 	>
-		wordle+
+		单词竞猜
 	</h1>
 	<div class="icons">
 		{#if showStats}
@@ -71,8 +71,8 @@
 			on:click={() => dispatch("closeTutPopUp")}
 			on:keydown={() => dispatch("closeTutPopUp")}
 		>
-			Swipe board or tap WORDLE+ to change game mode
-			<span class="ok">OK</span>
+			滑动棋盘或点击 单词竞猜 更改游戏模式
+			<span class="ok">明白</span>
 		</div>
 	{/if}
 </header>

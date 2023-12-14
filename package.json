@@ -1,6 +1,6 @@
 {
   "name": "wordle+",
-  "description": "A remake of the popular game Wordle with additional modes and features.",
+  "description": "单词竞猜是基于每日邮报的 Wordle 英语单词竞猜游戏，仿制的 Wordle+ 具有无限刷新模式、每小时刷新模式和每日刷新模式。此项目翻译自 Wordle+。",
   "version": "1.5.2",
   "type": "module",
   "private": "true",

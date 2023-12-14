@@ -14,20 +14,20 @@
 <div class="ctx-menu" style="top: {y}px; left: {x}px;">
 	{#if word !== ""}
 		<div>
-			Considering all hints, this row had:
-			<br /><br />
-			{pAns} possible answer{pAns > 1 ? "s" : ""}
+			线索提示：
 			<br />
-			{pSols} valid guess{pSols > 1 ? "es" : ""}
+			🔸符合以上线索的答案有 {pAns} 个
+			<br />
+			🔸还有 {pSols} 种猜测会给出有用的线索
 		</div>
 		<Definition {word} alternates={1} />
 	{:else}
 		<div>
-			Considering all hints, there {pAns > 1 ? "are" : "is"}:
-			<br /><br />
-			{pAns} possible answer{pAns > 1 ? "s" : ""}
+			线索提示：
 			<br />
-			{pSols} valid guess{pSols > 1 ? "es" : ""}
+			🔸符合以上线索的答案有 {pAns} 个
+			<br />
+			🔸还有 {pSols} 种猜测会给出有用的线索
 		</div>
 	{/if}
 </div>

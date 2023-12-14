@@ -10,19 +10,19 @@
 
 	function copyStats() {
 		navigator.clipboard.writeText(
-			`${modeData.modes[$mode].name} Wordle+ #${state.wordNumber} ${
-				failed(state) ? "X" : state.guesses
-			}/${state.board.words.length}\n\n    ${state.board.state
-				.slice(0, state.guesses)
-				.map((r) => r.join(""))
-				.join("\n    ")}\nmikhad.github.io/wordle`
+			`嘿！我发现了一个好玩的~ 单词竞猜 \n\n ${modeData.modes[$mode].name} 第${state.wordNumber}期\n
+${state.board.state
+.slice(0, state.guesses)
+.map((r) => r.join(""))
+.join("\n")}\n\n${failed(state) ? "💢 哦豁，我没有猜中~" : '🎉 哟吼，我'+state.guesses+'次就猜中了~'}
+\n快来一起玩：https://mikhad.github.io/wordle`
 		);
-		toaster.pop("Copied");
+		toaster.pop("分享内容已复制到剪贴板~");
 	}
 </script>
 
 <div on:click={copyStats} on:keydown={copyStats}>
-	share
+	分享
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
 		<path
 			fill="white"

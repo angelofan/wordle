@@ -64,7 +64,7 @@
 		{/each}
 	</div>
 	<div class="row">
-		<Key letter="ENTER" on:keystroke={() => !disabled && dispatch("submitWord")} />
+		<Key letter="提交" on:keystroke={() => !disabled && dispatch("submitWord")} />
 		{#each keys[2] as letter}
 			<Key
 				{letter}

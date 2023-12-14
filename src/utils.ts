@@ -123,10 +123,10 @@ function countOccurrences<T>(arr: T[], val: T) {
 
 export function contractNum(n: number) {
 	switch (n % 10) {
-		case 1: return `${n}st`;
-		case 2: return `${n}nd`;
-		case 3: return `${n}rd`;
-		default: return `${n}th`;
+		case 1: return `第${n}个`;
+		case 2: return `第${n}个`;
+		case 3: return `第${n}个`;
+		default: return `第${n}个`;
 	}
 }
 
@@ -157,7 +157,7 @@ export const modeData: ModeData = {
 	default: GameMode.daily,
 	modes: [
 		{
-			name: "Daily",
+			name: "天天竞猜 - 每日刷新",
 			unit: ms.DAY,
 			start: 1642370400000,	// 17/01/2022 UTC+2
 			seed: newSeed(GameMode.daily),
@@ -166,7 +166,7 @@ export const modeData: ModeData = {
 			useTimeZone: true,
 		},
 		{
-			name: "Hourly",
+			name: "时时竞猜 - 每小时刷新",
 			unit: ms.HOUR,
 			start: 1642528800000,	// 18/01/2022 8:00pm UTC+2
 			seed: newSeed(GameMode.hourly),
@@ -175,7 +175,7 @@ export const modeData: ModeData = {
 			streak: true,
 		},
 		{
-			name: "Infinite",
+			name: "无限竞猜 - 无限刷新",
 			unit: ms.SECOND,
 			start: 1642428600000,	// 17/01/2022 4:10:00pm UTC+2
 			seed: newSeed(GameMode.infinite),
