@@ -125,6 +125,7 @@ a:visited {
 	color: white;
 	background: var(--color-correct);
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 .button {
