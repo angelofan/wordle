@@ -71,7 +71,7 @@
 			on:click={() => dispatch("closeTutPopUp")}
 			on:keydown={() => dispatch("closeTutPopUp")}
 		>
-			滑动棋盘或点击 单词竞猜 更改游戏模式
+			左右滑动棋盘或点击 单词竞猜 更改游戏模式
 			<span class="ok">明白</span>
 		</div>
 	{/if}
